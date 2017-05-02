@@ -10,6 +10,9 @@ end
 end
 
 def show
+  if params[:team_id]
+  @team = Team.find(params[:team_id])
+  end
   @player = Player.find(params[:id])
   @playerid = @player.id
 end
@@ -33,12 +36,26 @@ def update
   redirect_to @player
 end
 
+def destroy
+    @player = Player.find(params[:id])
+    @player.destroy
+    redirect_to teams_path
+  end
+
 def add_membership
     @player = Player.find(params[:id])
     @team = Team.find(params[:team_id])
-    @player.memberships.create!
-    redirect_to :back
+    @player.memberships.create!(team: @team)
+    redirect_to team_path(@team)
   end
+
+def remove_membership
+  @team = Team.find(params[:team_id])
+  @player = Player.find(params[:id])
+  @membership = Membership.find_by(player: @player)
+  @membership.destroy
+  redirect_to team_path(@team)
+end
 
 private
 

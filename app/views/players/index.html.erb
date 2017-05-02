@@ -7,8 +7,8 @@
 <ul>
   <% @players.each do |player| %>
     <li>
-      <%= link_to "#{player.name}", player_path(player) %>
-      <%= link_to "(+)", add_membership_team_player_path(@team, player), method: :post %>
+      <%= link_to player.name, add_membership_team_player_path(@team, player), method: :post %></h3>
+
     </li>
   </ul>
     <% end %>

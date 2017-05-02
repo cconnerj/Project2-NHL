@@ -1,4 +1,4 @@
 class Player < ActiveRecord::Base
-  belongs_to :team, optional: true
   has_many :memberships
+  has_many :teams, through: :memberships
 end

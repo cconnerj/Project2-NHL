@@ -1,3 +1,8 @@
 <h1><%= "#{@team.city} #{@team.name}" %></h1>
-<p><%= link_to "Edit this team", edit_team_path %>
+<p><%= link_to "Edit Team Information", edit_team_path %>
 <h3><%= link_to "Add Player to team", team_players_path(@team) %></h3>
+
+<% @team.players.each do |player| %>
+<h2><%= link_to "#{player.name} (#{player.position})", team_player_path(@team, player) %></h2>
+<%= image_tag player.img_url %>
+<% end %>

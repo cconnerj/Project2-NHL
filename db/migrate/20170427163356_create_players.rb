@@ -5,7 +5,6 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :position
       t.string :img_url
-      t.references :team, index: true, foreign_key: true
     end
   end
 end
