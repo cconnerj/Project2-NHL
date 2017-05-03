@@ -1,17 +1,29 @@
-<h1>Edit Player</h1>
+<div class="form">
+<h2>Edit Player</h2>
 
 <%= form_for @player do |f| %>
+<div class="input">
   <%= f.label :name %>
   <%= f.text_field :name%>
-
+</div>
+<br>
+<div class="input">
   <%= f.label :age %>
   <%= f.text_field :age %>
-
+</div>
+<br>
+<div class="input">
   <%= f.label :position %>
   <%= f.text_field :position %>
-
+</div>
+<br>
+<div class="input">
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
+</div>
 
   <%= f.submit %>
 <% end %>
+<%= link_to 'Delete Player', player_path(@player), method: :delete, class: 'delete' %>
+
+</div>

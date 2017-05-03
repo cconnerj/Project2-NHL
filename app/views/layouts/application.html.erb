@@ -9,8 +9,15 @@
   </head>
 
   <body>
-    <%= link_to "View Team list", teams_path  %>
-    <%= link_to "View Player list", players_path  %>
+    <div class ="top">
+      <div class="title">
+      <h1>Team Creator</h1>
+    </div>
+    <div class = "view">
+      <h2><%= link_to "View Team list", teams_path  %></h2>
+      <h2><%= link_to "View Player list", players_path  %></h2>
+    </div>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -39,7 +39,7 @@ end
 def destroy
     @player = Player.find(params[:id])
     @player.destroy
-    redirect_to teams_path
+    redirect_to players_path
   end
 
 def add_membership

@@ -1,4 +1,5 @@
 <% if @team then %>
+<div class="playershow">
 <p><%= image_tag @player.img_url %></p>
 <h1><%= @player.name %></h1>
 <% if @playerid > 25 then %>
@@ -6,20 +7,17 @@
 <%else %>
 <% end %>
 
-<ul>
-  <li>Age:
-    <%= @player.age %></li>
-  <li>Position:
-    <%= @player.position %></li>
-</ul>
-<% if @player.team_ids = true then%>
-<h3><%= link_to "Remove player from team", remove_membership_team_player_path(@team, @player), method: :delete%></h3>
-<%else %>
-<h3>
-  <%= link_to "add player to team", add_membership_team_player_path(@team, @player), method: :post %></h3>
-<%end %>
-<%else%>
 
+  <p>Age:
+    <%= @player.age %></p>
+  <p>Position:
+    <%= @player.position %></p>
+
+
+<h3><%= link_to "Remove player from team", remove_membership_team_player_path(@team, @player), method: :delete%></h3>
+</div>
+<%else%>
+<div class="playershow">
 <p><%= image_tag @player.img_url %></p>
 <h1><%= @player.name %></h1>
 <% if @playerid > 25 then %>
@@ -27,10 +25,11 @@
 <%else %>
 <%end%>
 
-<ul>
-  <li>Age:
-    <%= @player.age %></li>
-  <li>Position:
-    <%= @player.position %></li>
-</ul>
+
+  <p>Age:
+    <%= @player.age %></p>
+  <p>Position:
+    <%= @player.position %></p>
+
+</div>
 <% end %>

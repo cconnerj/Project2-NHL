@@ -1,16 +1,27 @@
-<h1>Edit Team</h1>
+<div class="form">
+<h2>Edit Team</h2>
 
+<div class="formtitle">
 <%= form_for @team do |f| %>
+<div class="input">
   <%= f.label :city %>
   <%= f.text_field :city %>
-
+</div>
+<br>
+<div class="input">
   <%= f.label :name %>
   <%= f.text_field :name %>
-
+</div>
+<br>
+<div class="input">
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
-
+</div>
+<br>
   <%= f.submit %>
 <% end %>
-
-<%= link_to 'Delete!', team_path(@team), method: :delete, class: 'delete' %>
+</div>
+</div>
+<div class="delete">
+<%= link_to 'Delete Current Team', team_path(@team), method: :delete, class: 'delete' %>
+</div>

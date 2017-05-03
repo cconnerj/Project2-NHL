@@ -1,27 +1,27 @@
 <h1>Players</h1>
 
-<% if @team then %>
+<% if @team%>
 
-<h2><%= link_to "Create a Player", new_player_path %></h2>
+<p>Click player name to add to team</p>
 
-<ul>
+
   <% @players.each do |player| %>
     <li>
-      <%= link_to player.name, add_membership_team_player_path(@team, player), method: :post %></h3>
-
+      <%= link_to player.name, add_membership_team_player_path(@team, player), method: :post %>
     </li>
-  </ul>
+
     <% end %>
 <% else %>
-
+<div class = "createplayer">
 <h2><%= link_to "Create a Player", new_player_path %></h2>
+</div>
 
-<ul>
+
   <% @players.each do |player| %>
     <li>
       <%= link_to "#{player.name}", player_path(player) %>
     </li>
 
-</ul>
+
 <% end %>
 <% end %>
