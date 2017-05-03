@@ -26,5 +26,3 @@ braden= Player.create!(name: "Braden Holtby", age: 27 , position:"Goalie", img_u
 henrik= Player.create!(name: "Henrik Lundqvist", age: 35 , position:"Goalie", img_url:"https://nhl.bamcontent.com/images/headshots/current/168x168/8468685.jpg")
 craig= Player.create!(name: "Craig Anderson", age: 35 , position:"Goalie", img_url:"https://nhl.bamcontent.com/images/headshots/current/168x168/8467950.jpg")
 cam= Player.create!(name: "Cam Talbot", age: 29 , position:"Goalie", img_url:"https://nhl.bamcontent.com/images/headshots/current/168x168/8475660.jpg")
-
-washington = Team.create(name:"Capitals", city: "Washington", img_url:"#")

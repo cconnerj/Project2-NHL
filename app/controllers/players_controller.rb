@@ -32,6 +32,7 @@ end
 
 def update
   @player = Player.find(params[:id])
+  @player.update(player_params)
   @playerid = @player.id
   redirect_to @player
 end

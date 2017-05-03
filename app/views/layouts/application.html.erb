@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project2</title>
+    <title>Build your own Team</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,11 +11,11 @@
   <body>
     <div class ="top">
       <div class="title">
-      <h1>Team Creator</h1>
+      <h1>Hockey Team Creator</h1>
     </div>
     <div class = "view">
       <h2><%= link_to "View Team list", teams_path  %></h2>
-      <h2><%= link_to "View Player list", players_path  %></h2>
+      <h2><%= link_to "Research Players", players_path  %></h2>
     </div>
     </div>
     <%= yield %>
